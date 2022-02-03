@@ -28,7 +28,7 @@ jobs:
         cargo-locked: ["--locked", ""]
         include:
           - os: 'windows-latest'
-            --no-default-features: '--no-default-features'
+            no-default-features: '--no-default-features'
     steps:
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
