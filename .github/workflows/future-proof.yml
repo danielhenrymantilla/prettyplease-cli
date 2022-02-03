@@ -26,6 +26,9 @@ jobs:
           - beta
           - nightly
         cargo-locked: ["--locked", ""]
+        include:
+          - os: 'windows-latest'
+            --no-default-features: '--no-default-features'
     steps:
       - name: Install Rust toolchain
         uses: actions-rs/toolchain@v1
@@ -45,4 +48,4 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: test
-          args: ${{ matrix.cargo-locked }}
+          args: '${{ matrix.cargo-locked }} ${{ matrix.no-default-features }}'

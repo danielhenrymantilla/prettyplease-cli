@@ -9,8 +9,8 @@ name = "prettyplease-cli"
 authors = [
     "Daniel Henry-Mantilla <daniel.henry.mantilla@gmail.com>",
 ]
-version = "0.1.0"  # Keep in sync
-edition = "2018"
+version = "0.1.1-rc1"  # Keep in sync
+edition = "2021"
 
 license = "Zlib OR MIT OR Apache-2.0"
 repository = "https://github.com/danielhenrymantilla/prettyplease-cli"
@@ -31,7 +31,7 @@ check-shows-diffs = ["prettydiff"]
 anyhow = "1.0.1"
 prettyplease = "0.1.2"
 prettydiff.optional = true
-prettydiff.version = "0.5.1"
+prettydiff.version = "0.5.1"  # Fails on Windows: https://github.com/romankoblov/prettydiff/issues/9
 syn.version = "1.0.85"
 syn.features = ["full"]
 
