@@ -11,4 +11,4 @@ find . \
         sed -i -E "s/\".*?\"(  # Keep in sync)/\"$1\"\\1/g" '{}' \
     \;
 
-cargo +stable update -v -w
+cargo update -v -w
