@@ -1,0 +1,46 @@
+# Templated by `cargo-generate` using https://github.com/danielhenrymantilla/proc-macro-template
+
+[[bin]]
+name = "prettyplease-fmt"
+path = "src/main.rs"
+
+[package]
+name = "prettyplease-cli"
+authors = [
+    "Daniel Henry-Mantilla <daniel.henry.mantilla@gmail.com>",
+]
+version = "0.1.0"  # Keep in sync
+edition = "2018"
+
+license = "Zlib OR MIT OR Apache-2.0"
+repository = "https://github.com/danielhenrymantilla/prettyplease-cli"
+# documentation = "https://docs.rs/prettyplease-cli"
+readme = "README.md"
+
+description = "Unofficial and basic CLI wrapper around the `::prettyplease` library."
+keywords = ["format", "formatting", "rustfmt", "syn", "comments"]
+
+[features]
+default = [
+    "check-shows-diffs",
+]
+
+check-shows-diffs = ["prettydiff"]
+
+[dependencies]
+anyhow = "1.0.1"
+prettyplease = "0.1.2"
+prettydiff.optional = true
+prettydiff.version = "0.5.1"
+syn.version = "1.0.85"
+syn.features = ["full"]
+
+[dev-dependencies]
+
+[workspace]
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = [
+    "--html-before-content", "fix-docsrs-li-details-summary.html",
+]
