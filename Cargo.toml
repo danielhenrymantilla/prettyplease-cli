@@ -39,6 +39,10 @@ syn.features = ["full"]
 
 [workspace]
 
+[patch.crates-io.syn]
+git = "https://github.com/danielhenrymantilla/syn"
+branch = "tolerate_leading_colons_in_braced_use"
+
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = [
